@@ -44,25 +44,31 @@
       </div>
       <div class="input-wrapper flex">
         <form
-          method="post"
-          action="#"
+          method="POST"
+          action="http://localhost:5500/email/subscribe"
           id="waitlist-form"
+          name="email"
           class="header-field input__field bg-black-200 par par-fs-100"
         >
           <input
-            class="input"
+            class="input email-input"
             placeholder="Please enter your email address"
             type="email"
+            name="email"
             required
           />
-          <button
+         <button
             class="button header__button par-fw-300 bg-green-100 txt-white-100"
             type="submit"
           >
-            Notify Me
-          </button>
+          Subscribe
+        </button>
         </form>
-
+        <br/>
+        <div class="message">
+          <p class="success-email" style="display:none; color: green;">Thank you for subscribing to our service</p>
+          <p class="wrong-email" style="display:none; color: brown;">Please enter a valid email address</p>
+        </div>
         <p class="input-info par par-fs-300 fw-main txt-black-300">
           Notify me when the app is lunched
         </p>
@@ -390,7 +396,9 @@
         </ul>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/cta-card-hover.js"></script>
+    <script src="scripts/email-sub.js"></script>
   </body>
 </html>
